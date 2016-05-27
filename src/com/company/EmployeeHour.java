@@ -10,15 +10,14 @@ public class EmployeeHour extends Employee {
     int hourlyPayment = random.nextInt(10);
     int salary = hourlyPayment * 8 * 20;
 
-    public EmployeeHour(int id, String name, String surname) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
+    private EmployeeHour(int id, String name, String surname, int salary) {
+        super(id, name, surname, salary);
     }
 
 
     @Override
-    public void salary() {
+    public int salary() {
         System.out.println(salary + " $");
+        return salary;
     }
 }
