@@ -7,14 +7,12 @@ abstract class Employee {
     private String name;
     private String surname;
     private int id;
-    private int salary;
 
 
-    public Employee(int id, String name, String surname, int salary) {
+    public Employee(int id, String name, String surname) {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.salary = salary;
 
     }
 
@@ -43,13 +41,6 @@ abstract class Employee {
         this.id = id;
     }
 
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
 
     public abstract int salary();
 }
